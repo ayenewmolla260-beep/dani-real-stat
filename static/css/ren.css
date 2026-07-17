@@ -1,0 +1,245 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat', sans-serif;
+}
+
+
+body{
+
+    background:#0b0b0b;
+
+    color:white;
+
+}
+
+
+
+/* Header */
+
+.rent-header{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.7)
+    ),
+    url("../images/rent-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.rent-header h1{
+
+    font-size:45px;
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+}
+
+
+.rent-header p{
+
+    font-size:18px;
+
+    color:#ddd;
+
+}
+
+
+
+/* Properties */
+
+.property-container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:50px auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+/* Card */
+
+.property-card{
+
+    background:#151515;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.5);
+
+    transition:.4s;
+
+}
+
+
+.property-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/* Image */
+
+.property-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+
+
+/* Info */
+
+.property-info{
+
+    padding:25px;
+
+}
+
+
+.badge{
+
+    display:inline-block;
+
+    background:#b8860b;
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.property-info h2{
+
+    color:#d4af37;
+
+    font-size:25px;
+
+}
+
+
+.property-info h3{
+
+    margin:10px 0;
+
+    font-size:22px;
+
+}
+
+
+.property-info p{
+
+    color:#ccc;
+
+    line-height:1.6;
+
+}
+
+
+
+/* Details */
+
+.details{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:20px 0;
+
+    color:#fff;
+
+}
+
+
+
+/* Button */
+
+.btn{
+
+    display:inline-block;
+
+    padding:12px 30px;
+
+    background:#b8860b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    background:#d4af37;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .rent-header h1{
+
+        font-size:32px;
+
+    }
+
+
+    .details{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+}
