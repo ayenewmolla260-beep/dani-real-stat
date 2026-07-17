@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="../../static/css/admin.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>Dani Real Estate</h1>
+
+    <h2>Admin Dashboard</h2>
+
+
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h3>🏠 Properties</h3>
+            <p>{{ properties|length }}</p>
+        </div>
+
+
+        <div class="card">
+            <h3>📷 Photos</h3>
+            <p>{{ properties|length }}</p>
+        </div>
+
+
+        <div class="card">
+            <h3>🎥 Videos</h3>
+            <p>{{ properties|length }}</p>
+        </div>
+
+
+    </div>
+
+<a href="/admin/add-property">
+    Add Property
+</a>
+
+<a href="/admin/login">
+    Logout
+</a>
+
+
+
+</div>
+
+
+</body>
+</html>

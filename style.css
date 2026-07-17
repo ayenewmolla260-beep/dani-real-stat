@@ -1,0 +1,1101 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color:#ffffff ;
+    color: #2c3e50;
+    line-height: 1.6;
+    overflow-x: hidden;
+    max-width: 100%;
+    
+}
+
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Left Aligned Logo */
+.main-header {
+    background-color: #ffffff ;
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: flex-start; /* ሎጎውን ወደ ግራ ዳር ይገፋዋል */
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+/* "Dani" የሚለው ዋና ፅሁፍ */
+.brand-name {
+    font-size: 36px !important; /* መጠኑን ወደ 36px ከፍ አድርገነዋል */
+    font-weight: 800 !important; /* ይበልጥ ወፍራም እንዲሆን */
+    color: #0d2c54 !important; 
+    text-transform: uppercase !important; 
+    letter-spacing: 2px !important; 
+    line-height: 1 !important;
+    display: 
+    block !important;
+}
+
+/* "Real Estate" የሚለው ንዑስ ፅሁፍ */
+.brand-sub {
+    font-size: 18px !important; /* መጠኑን ወደ 18px ከፍ አድርገነዋል */
+    font-weight: 600 !important; 
+    color: #c5a85c !important; 
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    margin-top: 6px !important;
+    display: block !important;
+}
+
+
+.logo-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    display:block;
+}
+@media (max-width: 768px) {
+    .logo-icon img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.logo-text h1 {
+    font-size: 26px;
+    color: #1a252f;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #b8860b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 2px;
+}
+
+/* Hero Showcase */
+/* የዋናው ሴክሽን አቀማመጥ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 80vh; /* ወይም 100vh (እንደ ዌብሳይትህ ቁመት) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* ቪዲዮው ከዳር እንዳይተርፍ */
+}
+
+/* ቪዲዮው ሙሉ ለሙሉ ጀርባውን እንዲሸፍን ማድረጊያ */
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ቪዲዮው ሳይጨፈለቅ ሙሉ በሙሉ ይለጠጣል */
+    z-index: 1; /* ከሁሉም በታች እንዲሆን */
+}
+
+/* ቪዲዮውን ማጨለሚያ (Overlay) */
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* 55% ጥቁረት (ፅሁፉ በቪዲዮው ላይ ጎልቶ እንዲወጣ) */
+    z-index: 2; /* ከቪዲዮው በላይ፣ ከፅሁፉ በታች */
+}
+
+/* የአንተ ፅሁፎች እና ይዘቶች ያሉበት ሳጥን */
+.hero-content {
+    position: relative;
+    z-index: 3; /* ከቪዲዮው በላይ እንዲንሳፈፍ ያደርገዋል */
+    color: #ffffff; /* የፅሁፎቹ ቀለም ነጭ */
+    text-align: center;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(26, 37, 47, 0.8), rgba(26, 37, 47, 0.6));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eaedd1;
+    font-weight: 300;
+}
+
+/* Button */
+.btn-primary {
+    background-color: #b8860b;
+    color: #ffffff;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #966f0a;
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .header-flex {
+        justify-content: center; /* በስልክ ሲሆን መሃል ላይ እንዲሆን */
+    }
+    
+    
+    .hero-content h2 {
+        font-size: 32px;
+    }
+    
+    .hero-content p {
+        font-size: 15px;}
+}
+ 
+ 
+/* --- የናቭ ባር እና የሄደር አቀማመጥ ኮድ --- */
+
+/* 1. ሄደሩን ሙሉ ስፋት ሰጥቶ ሎጎን በግራ ናቭን በቀኝ ማድረግ */
+.header-inner {
+    display: flex;
+    justify-content: space-between; /* ሎጎን በግራ ጫፍ፣ ማውጫውን በቀኝ ጫፍ ያስራል */
+    align-items: center;
+    width: 100%;
+}
+
+/* 2. የሶስት ሰረዞች ምልክት (Menu Icon) አቀማመጥ በቀኝ ጫፍ */
+.menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    color: #1a252f;
+    order: 2; /* በቀኝ ጫፍ እንዲሰለፍ ያደርገዋል */
+}
+
+/* 3. የናቭ ባር ዝርዝር አቀማመጥ */
+.nav-bar {
+    order: 1;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* ማውጫው ላይ ማውዝ ሲያርፍ እና አክቲቭ ሲሆን ወርቅ ቀለም */
+.nav-bar a:hover, 
+.nav-bar a.active {
+    color: #b8860b;
+}
+
+/* Contact Us በተን ዲዛይን */
+.nav-bar a.nav-btn {
+    background-color: #1a252f;
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+.nav-bar a.nav-btn:hover {
+    background-color: #b8860b;
+    color: #ffffff;
+}
+
+/* 4. ለስልክ ስክሪን ሲሆን (Responsive) */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none; /* በስልክ ስክሪን ሲሆን ዝርዝሩ ተደብቆ በ3 ሰረዝ ብቻ እንዲሆን */
+    }
+}
+/* --- ለስልክ ስክሪን ከግራ በኩል የሚወጣ ማውጫ እና የፅሁፍ ዲዛይን --- */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: block;
+        position: fixed; /* በገጹ ላይ ሙሉ በሙሉ ተጣብቆ እንዲቆም */
+        top: 0;
+        left: -100%; /* ማውጫውን በግራ በኩል ሙሉ በሙሉ መደበቂያ */
+        width: 280px; /* የወጪው ማውጫ ስፋት */
+        height: 100vh; /* ሙሉ የስክሪኑን ቁመት እንዲይዝ */
+        background-color: #ffffff;
+        padding: 40px 30px;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+        transition: left 0.4s ease-in-out; /* ከግራ ወደ ቀኝ የመንሸራተቻ አኒሜሽን */
+        z-index: 999;
+    }
+
+    /* ጃቫስክሪፕቱ 'active' ሲያደርገው ከግራ ተንሸራቶ ይወጣል */
+    .nav-bar.active {
+        left: 0; /* በትክክል በግራ ጫፍ ላይ መጥቶ ይቆማል */
+    }
+
+    /* የማውጫ ዝርዝሮችን ወደ ታች መደርደር */
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+        margin-bottom: 40px; /* ከጽሑፉ ጋር እንዳይጋፋ ክፍተት */
+    }
+
+    .nav-bar a {
+        font-size: 18px;
+    }
+
+    /* ከናቭ ባሩ በታች ያለው ተጨማሪ ጽሑፍ ዲዛይን */
+    .nav-extra-text {
+        border-top: 1px solid #eeeeee; /* ከማውጫው ለመለየት ቀጭን መስመር */
+        padding-top: 25px;
+    }
+
+    .nav-extra-text h3 {
+        font-size: 18px;
+        color: #b8860b; /* ወርቃማ ቀለም */
+        margin-bottom: 10px;
+    }
+
+    .nav-extra-text p {
+        font-size: 14px;
+        color: #7f8c8d;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+### 2. የተስተካከለው CSS (ከዳር እስከ ዳር እና ተስማሚ ስታይል)
+ይህንን ወደ `css/style.css` ጨምረው። ፅሁፎቹን በግራ በኩል (Left-aligned) አድርገን ከዳር እስከ ዳር (90% width) አስፍተናቸዋል፡
+
+```css
+/* --- LUXURY DARK MODE STYLES (FULL WIDTH & READ MORE) --- */
+
+.about-section {
+    padding: 80px 5%; /* ከዳር 5% ብቻ በመተው ሰፊ እንዲሆን ያደርገዋል */
+    width: 100%;
+}
+
+.bg-dark { background-color: #000000; }
+.bg-dark-alt { background-color: #0a0a0a; border-top: 1px solid #111; border-bottom: 1px solid #111; }
+
+/* ኮንቴይነሩ ከመሃል ወደ ግራ (text-left) እና ሰፊ (90%) ሆኗል */
+.about-container {
+    max-width: 95%; 
+    margin: 0 auto;
+    text-align: left; 
+}
+
+.section-subtitle {
+    display: block;
+    color: #d4af37;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align:center;
+}
+
+.section-text {
+    width: 100%; /* ከዳር እስከ ዳር ይዘረጋል */
+    margin-bottom: 30px;
+    font-size: 1.15rem;
+    color: #b3b3b3;
+    line-height: 1.9;
+    text-align:center;
+}
+
+.section-text strong { color: #d4af37; }
+
+/* Read More Button ስታይል */
+.view-more-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #d4af37;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding-top:10px;
+    padding-bottom:10px;
+    display:incline-block;
+}
+
+.view-more-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #d4af37;
+    color: #000000;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* መጀመሪያ ክፍሎቹ ተደብቀው የሚቆዩበት የ CSS ስታይል */
+.hidden-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out; /* ውብ በሆነ አኒሜሽን እንዲዘረጋ */
+}
+
+/* ጃቫስክሪፕቱ ሲከፍተው የሚጠቀመው ክላስ */
+.hidden-content.show {
+    max-height: 4000px; /* ሙሉ በሙሉ እንዲታይ ትልቅ ቁጥር */
+    transition: max-height 1.5s ease-in;
+}
+
+/* ካርዶች እና ግሪዶች (ሙሉ ስፋት እንዲጠቀሙ) */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about-card {
+    flex: 1;
+    min-width: 300px;
+    background: #0d0d0d;
+    padding: 40px 30px;
+    border: 1px solid #1a1a1a;
+    transition: all 0.4s ease;
+}
+
+.about-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+.card-icon { font-size: 2.5rem; color: #d4af37; margin-bottom: 15px; }
+.about-card h3 { color: #ffffff; margin-bottom: 12px; }
+.about-card p { color: #999999; font-size: 0.95rem; line-height: 1.7; }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.feature-item {
+    background: #0d0d0d;
+    padding: 30px;
+    border-left: 3px solid #d4af37;
+    border-top: 1px solid #151515; border-right: 1px solid #151515; border-bottom: 1px solid #151515;
+}
+
+.feature-item h4 { color: #ffffff; margin-bottom: 10px; font-size: 1.2rem; }
+.feature-item p { color: #888888; font-size: 0.95rem; line-height: 1.7; }
+.text-gold { color: #d4af37; margin-right: 10px; }
+
+.testimonial-wrapper { width: 100%; margin: 40px 0; }
+.testimonial-box {
+    background: #0d0d0d;
+    color: #e0e0e0;
+    padding: 40px;
+    position: relative;
+    font-style: italic;
+    border: 1px solid #1a1a1a;
+}
+.quote-icon { font-size: 2rem; color: rgba(212, 175, 55, 0.1); position: absolute; top: 15px; left: 20px; }
+.testimonial-author { margin-top: 20px; font-style: normal; }
+/* --- PROPERTIES 3-COLUMNS ONE-BY-ONE SLIDER --- */
+.properties-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ሙሉ ስክሪኑን የሚጠቀም መስኮት */
+.slider-window {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* ስላይደሩ በረድፍ ተደርድሮ በስላcontinuous እንዲንሸራተት */
+.properties-slider {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    width: max-content;
+}
+
+/* 3 ካርዶች ጎን ለጎን እንዲታዩ እያንዳንዱ ካርድ 33.33vw (የስክሪን ስፋት ሲካፈል ለ 3) ይሆናል */
+.property-card {
+    width: 30vw; /* ለትልቅ ኮምፒውተሮች 3 ቤት ጎን ለጎን ያሳያል */
+    margin-right: 30px; /* በካርዶች መካከል ያለው ክፍተት */
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.property-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.property-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+}
+
+/* For Sale / Rent ባጅ */
+.badge-status {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #d4af37;
+    color: #000;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.badge-status.rent { background-color: #ffffff; }
+
+.prop-details { padding: 25px; }
+.prop-details h3 { color: #fff; font-size: 1.25rem; margin-bottom: 8px; }
+.prop-details .location { color: #888; font-size: 0.9rem; margin-bottom: 15px; }
+.prop-details .location i { color: #d4af37; margin-right: 5px; }
+
+.amenities {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a;
+    padding: 12px 0; margin-bottom: 20px;
+}
+.amenities span { color: #b3b3b3; font-size: 0.85rem; }
+.amenities i { color: #d4af37; margin-right: 4px; }
+
+.price-row { display: flex; justify-content: space-between; align-items: center; }
+.price-row .price { color: #fff; font-size: 1.4rem; font-weight: 700; }
+
+.view-prop-btn {
+    padding: 8px 20px; border: 1px solid #d4af37; color: #fff;
+    text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: 0.3s;
+}
+.view-prop-btn:hover { background: #d4af37; color: #000; }
+
+.slider-controls { display: flex; gap: 15px; margin-top: 20px; }
+.slider-controls button {
+    background: transparent; border: 1px solid #333; color: #fff;
+    width: 45px; height: 45px; border-radius: 50%; cursor: pointer; transition: 0.3s;
+}
+.slider-controls button:hover { border-color: #d4af37; color: #d4af37; }
+
+/* ታብሌት እና ስልክ ላይ 3ቱ ተለጥጠው እንዳይበላሹ አቀማመጡን ማስተካከያ */
+@media (max-width: 1024px) {
+    .property-card { width: 42vw; } /* 2 ቤት ጎን ለጎን */
+}
+@media (max-width: 768px) {
+    .property-card { width: 85vw; } /* 1 ቤት ብቻ ሙሉ ስክሪን */
+}
+/* --- ቴስቴሞኒያል
+/* --- TESTIMONIALS SECTION STYLE --- */
+.testimonials-section {
+    background-color: #050505; /* ጥቁር መደብ */
+    padding: 80px 5%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial-slider-window {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* በአንድ ጊዜ 1 ምስክርነት በስልኮች፣ በኮምፒውተር ደግሞ 2 ማሳየት ይቻላል */
+.testimonial-card {
+    min-width: calc(50% - 20px);
+    margin-right: 20px;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    padding: 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 3px solid #1a1a1a;
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    border-bottom-color: #d4af37; /* ወርቅማ መስመር በሆቨር */
+}
+
+.quote-icon {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0 0 25px 0;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-info img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+}
+
+.client-info h4 {
+    color: #fff;
+    margin: 0 0 3px 0;
+    font-size: 1.05rem;
+}
+
+.client-info span {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* ቀስቶች */
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.testimonial-controls button {
+    background: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.testimonial-controls button:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+/* ለስልክ ማስተካከያ (በስልክ በአንድ ጊዜ 1 ብቻ እንዲታይ) */
+@media (max-width: 768px) {
+    .testimonial-card {
+        min-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .testimonial-slider {
+        flex-direction: column;
+        transform: none !important; /* በስልክ ወደታች እንዲደረደሩ */
+    }
+    .testimonial-controls {
+        display: none; /* በስልክ ስላይደሩ ስለሚዘረጋ ቀስት አያስፈልግም */
+    }
+}
+
+/* የጋለሪ ሴክሽን አጠቃላይ መዋቅር */
+.gallery-section {
+    background-color: #111; /* ጥቁር ጀርባ */
+    padding: 80px 20px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+     margin-top: 50px; 
+}
+
+
+/* የውስጠኛው መያዣ መጠን */
+.gallery-container {
+    width: 100%;
+    max-width: 850px; /* ከኮንታክት ፎርሙ ስፋት ጋር እኩል የተደረገ */
+}
+
+/* የጋለሪው ርዕስ */
+.gallery-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.yellow-bar {
+    color: #ffcc00; /* ቢጫ መለያ መስመር */
+    margin-right: 5px;
+}
+
+.image-grid {
+  display: grid;
+  /* 2 እኩል ረድፎች (columns) ይፈጥራል */
+  grid-template-columns: repeat(2, 1fr);
+  /* በምስሎቹ መካከል ክፍተት እንዲኖር (አማራጭ) */
+  gap: 10px;
+  max-width: 800px; /* እንደ ፍላጎትህ ማስተካከል */
+  margin: 0 auto;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* ምስሉ እንዳይጨማደድ */
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.image-grid img:hover {
+  opacity: 0.7; /* ቀለሙን 70% ያደርገዋል (በጥቂቱ ያደበዝዘዋል) */
+  cursor: pointer; /* የማውዝ ምልክቷ ወደ እጅ እንድትቀየር */
+}
+/* --- Hero Section ከቪዲዮ ጀርባ ጋር ስታይል --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 75vh; /* የቪዲዮው ቁመት ስክሪኑን በሚገባ እንዲሸፍን */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* ቪዲዮው ወደ ዳር እንዳይተርፍ */
+    background-color: #000; /* ቪዲዮው እስኪከፍት ጥቁር ሆኖ ይጠብቃል */
+}
+/* 1. "Find Your Dream Home" የሚለው ዋና ርዕስ */
+.hero-content h2 {
+    font-family: 'Cinzel', serif !important; /* የፊደላቱን ቅርፅ የቅንጦት (Luxury) ያደርጋል */
+    font-size: 56px !important;              /* የፊደላቱን መጠን በትልቅነቱ ይወስናል */
+    font-weight: 700 !important;             /* ፊደላቱን ወፍራም (Bold) ያደርጋል */
+    color: #ffffff !important;   }            /* የፅሁፉን ከለር ነጭ ያደርጋል */
+  /* ቪዲዮው ጀርባውን ሙሉ በሙሉ እንዲሸፍን */
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /* ቪዲዮው ሳይጨፈለቅ እንዲለጠጥ */
+    z-index: 1; /* ከሁሉም በታች */
+}
+
+/* ቪዲዮውን ማጨለሚያ ከል */
+.hero-section .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* 55% ጥቁረት ይሰጣል (ፅሁፉ በቪዲዮው ላይ ጎልቶ እንዲወጣ) */
+    z-index: 2; /* ከቪዲዮው በላይ፣ ከፅሁፉ በታች */
+}
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:16px 40px;
+    background:linear-gradient(135deg,#d4af37,#b8860b);
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    border-radius:50px;
+    transition:0.4s ease;
+    box-shadow:0 10px 25px rgba(184,134,11,.4);
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 15px 35px rgba(184,134,11,.6);
+}
+
+.btn:active{
+    transform:scale(.96);
+}
+/* የፅሁፎቹ ሳጥን አቀማመጥ */
+.hero-content {
+    position: relative;
+    z-index: 3; /* ከቪዲዮው እና ከOverlayው በላይ እንዲንሳፈፍ */
+    color: #ffffff; /* በቪዲዮው ላይ ፅሁፉ ነጭ መሆን አለበት */
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+/* ሙሉው የመገናኛ ሴክሽን */
+.contact-sory {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    margin-top: 50px;
+}
+
+.contact-container {
+    max-width: 800px; /* ፎርሙ ብቻ ስለሆነ መሃል ላይ ያምራል */
+    margin: 0 auto;
+}
+
+/* ያማረው ርዕስ ዲዛይን */
+.contact-title {
+    font-size: 28px;
+    color: #111;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* ከርዕሱ ፊት ለፊት ያለችው ቢጫ ባር */
+.yellow-bar {
+    color: #ffcc00; /* ደመቅ ያለ ቢጫ ቀለም */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* በግራና ቀኝ እኩል የሚከፍለው ግሪድ (ለኮምፒውተርም ለስልክም ይሰራል) */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-full-width {
+    margin-bottom: 15px;
+}
+
+.form-row input, .form-full-width textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* ሳጥኖቹ ሲነኩ (Focus ሲሆኑ) ቀለማቸው ወደ ቢጫ እንዲያደላ */
+.form-row input:focus, .form-full-width textarea:focus {
+    border-color: #ffcc00;
+}
+
+/* በተኑን ወደ ቀኝ ማድረጊያ */
+.btn-container {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+/* የዋትስአፕ በተን ዲዛይን */
+.submit-btn {
+    background-color: #25D366; /* የ ዋትስአፕ አረንጓዴ */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px); /* ማውዝ ሲያርፍበት በጥቂቱ ከፍ ይላል */
+}
+
+/* ለስልክ ስክሪን የተደረገ ልዩ ማስተካከያ (ሳጥኖቹ ጎን ለጎን ሆነው እንዳይጣበቁ) */
+@media (max-width: 480px) {
+    .form-row {
+        gap: 10px;
+    }
+    .form-row input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* ከርዕሱ ፊት ለፊት ያለችው ቢጫ ባር */
+.yellow-bar {
+    color: #ffcc00; /* ደመቅ ያለ ቢጫ ቀለም */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* በግራና ቀኝ እኩል የሚከፍለው ግሪድ (ለኮምፒውተርም ለስልክም ይሰራል) */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-full-width {
+    margin-bottom: 15px;
+}
+
+.form-row input, .form-full-width textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* ሳጥኖቹ ሲነኩ (Focus ሲሆኑ) ቀለማቸው ወደ ቢጫ እንዲያደላ */
+.form-row input:focus, .form-full-width textarea:focus {
+    border-color: #ffcc00;
+}
+
+/* በተኑን ወደ ቀኝ ማድረጊያ */
+.btn-container {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+/* የዋትስአፕ በተን ዲዛይን */
+.submit-btn {
+    background-color: #25D366; /* የ ዋትስአፕ አረንጓዴ */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px); /* ማውዝ ሲያርፍበት በጥቂቱ ከፍ ይላል */
+}
+
+/* ለስልክ ስክሪን የተደረገ ልዩ ማስተካከያ (ሳጥኖቹ ጎን ለጎን ሆነው እንዳይጣበቁ) */
+@media (max-width: 480px) {
+    .form-row {
+        gap: 10px;
+    }
+    .form-row input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background:#111;
+    color:#fff;
+    padding:60px 8% 20px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer h2,
+.footer h3{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.footer p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+.footer ul{
+    list-style:none;
+}
+
+.footer ul li{
+    margin-bottom:12px;
+}
+
+.footer ul li a{
+    color:#ccc;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer ul li a:hover{
+    color:#d4af37;
+}
+
+.footer-contact p i{
+    color:#d4af37;
+    margin-right:10px;
+}
+
+.footer-social a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    margin-right:10px;
+    border-radius:50%;
+    background:#222;
+    color:#fff;
+    font-size:18px;
+    transition:.3s;
+}
+
+.footer-social a:hover{
+    background:#d4af37;
+    color:#111;
+}
+
+.footer-bottom{
+    margin-top:40px;
+    border-top:1px solid #333;
+    text-align:center;
+    padding-top:20px;
+}
+
+.footer-bottom p{
+    color:#aaa;
+    font-size:15px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    .footer{
+        text-align:center;
+    }
+
+    .footer-social{
+        margin-top:15px;
+    }
+
+    .footer-social a{
+        margin:5px;
+    }
+
+}

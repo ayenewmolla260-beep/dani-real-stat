@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Property</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buy.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="overlay">
+        <h1>Find Your Dream Home</h1>
+        <p>Luxury villas, apartments and houses at the best prices.</p>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search by city...">
+
+            <select>
+                <option>Property Type</option>
+                <option>Villa</option>
+                <option>Apartment</option>
+                <option>House</option>
+            </select>
+
+            <button>Search</button>
+        </div>
+    </div>
+</section>
+
+<!-- Properties -->
+<section class="properties">
+
+    <div class="card">
+
+        <div class="image">
+            <img src="../images/house1.jpg">
+            <span class="price">$450,000</span>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="content">
+
+            <h2>Luxury Villa</h2>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Dubai, UAE
+            </p>
+
+            <div class="details">
+                <span><i class="fa-solid fa-bed"></i> 4 Beds</span>
+                <span><i class="fa-solid fa-bath"></i> 3 Baths</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 320 m²</span>
+            </div>
+
+   <a href="villa-details.html" class="btn">View Details</a>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="image">
+            <img src="../images/house2.jpg">
+            <span class="price">$280,000</span>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="content">
+
+            <h2>Modern Apartment</h2>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Abu Dhabi, UAE
+            </p>
+
+            <div class="details">
+                <span><i class="fa-solid fa-bed"></i> 3 Beds</span>
+                <span><i class="fa-solid fa-bath"></i> 2 Baths</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 180 m²</span>
+            </div>
+
+<a href="apartment-details.html" class="btn">View Details</a>
+        </div>
+
+    </div>
+
+</section>
+<section class="featured">
+
+    <h2>Featured Properties</h2>
+    <p>Discover our hand-picked luxury homes and apartments.</p>
+
+</section>
+<div class="agent">
+    <img src="../images/agent.jpg" alt="Agent">
+
+    <div>
+        <h4>John Smith</h4>
+        <span>Real Estate Agent</span>
+    </div>
+</div>
+<!-- Image Slider -->
+<section class="slider">
+
+    <div class="slides">
+
+        <img src="../images/house1.jpg" class="slide active" alt="House 1">
+        <img src="../images/house2.jpg" class="slide" alt="House 2">
+        <img src="../images/house3.jpg" class="slide" alt="House 3">
+        <img src="../images/house4.jpg" class="slide" alt="House 4">
+
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+</section>
+<script src="../js/buy.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rent Properties | Dani Real Estate</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/rent.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header class="rent-header">
+
+    <h1>Rental Properties</h1>
+
+    <p>Find your perfect rental home with Dani Real Estate</p>
+
+</header>
+
+
+
+<section class="property-container">
+
+
+{% for property in properties %}
+
+
+<div class="property-card">
+
+
+    <img src="{{ url_for('static', filename='images/' + property.image) }}"
+    alt="Property Image">
+
+
+    <div class="property-info">
+
+
+        <span class="badge">
+            For Rent
+        </span>
+
+
+        <h2>
+            {{ property.price }}
+        </h2>
+
+
+        <h3>
+            {{ property.title }}
+        </h3>
+
+
+        <p>
+            <i class="fa-solid fa-location-dot"></i>
+            {{ property.location }}
+        </p>
+
+
+
+        <div class="details">
+
+            <span>
+                🛏 {{ property.bedrooms }} Beds
+            </span>
+
+
+            <span>
+                🛁 {{ property.bathrooms }} Baths
+            </span>
+
+
+            <span>
+                📐 {{ property.area }}
+            </span>
+
+        </div>
+
+
+
+        <p>
+            {{ property.description }}
+        </p>
+
+
+        <a href="https://wa.me/9715917909?text=Hello%20Dani%20Real%20Estate,%20I%20am%20interested%20in%20{{ property.title }}"
+   class="btn"
+   target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    Contact Agent
+</a>
+
+
+    </div>
+
+
+</div>
+
+
+
+{% else %}
+
+
+<h2>No Rental Properties Available</h2>
+
+
+{% endfor %}
+
+
+
+</section>
+
+
+</body>
+
+</html>
