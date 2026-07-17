@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dani Real Estate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+</head>
+<body>
+
+  
+ 
+<header class="main-header">
+    <!-- container-fluid ለጠቅላላው ስፋት -->
+    <div class="header-inner">
+        <div class="logo-area">
+            <div class="logo-icon">
+    <img src="{{ url_for('static', filename='images/b.png') }}"alt="">
+</div>
+       <div class="logo-text">
+                <span class="brand-name">Dani</span>
+                <span class="brand-sub">Real Estate</span>
+            </div>      
+        </div>
+          
+              
+
+    
+    
+       <!-- የሶስት ሰረዞች ምልክት (Hamburger Icon) -->
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- ኔቪጌሽን ባር -->
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#" class="active">about</a></li>
+                    <li><a href="{{ url_for('buy') }}">Buy</a></li>
+                      <li><a href="{{ url_for('sell') }}">Sell</a></li>
+
+<li><a href="{{ url_for('rent') }}">Rent</a></li>     
+                    <li><a href="#">Services</a></li> 
+                    <li><a href="#" class="nav-btn">Contact Us</a></li>
+                </ul>
+      <div class="nav-extra-text">
+        <h3>Dani Real Estate</h3>
+        <p>your dream home gsin me</p>
+        <p><i class="fas fa-phone"></i> +251 911 000 000</p>
+        <p><i class="fas fa-clock"></i> ሰኞ - ቅዳሜ: 2:00 - 11:00</p>
+    </div>            
+                
+            </nav>
+</header>
+        
+        <section class="hero-section">
+        <video autoplay loop muted playsinline class="hero-bg-video">
+         <source src="{{ url_for('static', filename='videos/gg.mp4') }}">
+         type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="container hero-content">
+            <h2>Find Your Dream Home</h2>
+            <p>Two decades of trusted service, exceptional quality, and guiding you home every step of the way.</p>
+            <a href="html/properties.html" class="btn">
+    <i class="fa-solid fa-house"></i>
+    Explore Properties
+</a>
+        </div>
+    </section>
+
+    
+            <section class="about-section bg-dark full-width">
+        <div class="about-container text-left">
+            <span class="section-subtitle">20+ Years of Excellence</span>
+            <h2 class="section-title">Who We Are</h2>
+            <p class="section-text">
+                Welcome to <strong>Dani Real Estate</strong>. For over two decades, we have been shaping the skyline and redefining luxury living. We believe that a home is more than just a building; it is a sanctuary of joy, peace, and security. With <strong>over 20 years of trusted experience</strong>, exceptional craftsmanship, and iconic designs, we are dedicated to turning your dream of premium homeownership into reality.
+            </p>
+            <button id="readMoreBtn" class="view-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+        </div>
+    </section>
+
+    <div id="moreAboutContent" class="hidden-content">
+
+        <section class="about-section bg-dark-alt full-width">
+            <div class="about-container text-left">
+                <span class="section-subtitle">Built on Trust</span>
+                <h2 class="section-title">Our Foundations</h2>
+                <div class="cards-container">
+                    <div class="about-card">
+                        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>🎯 Our Mission</h3>
+                        <p>To deliver world-class, modern, and secure residential properties at competitive prices while maintaining absolute transparency with our elite clients.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon"><i class="fas fa-eye"></i></div>
+                        <h3>👁️ Our Vision</h3>
+                        <p>To remain the premier, most trusted luxury real estate developer in the region, recognized for 20+ years of construction perfection.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon"><i class="fas fa-gem"></i></div>
+                        <h3>💎 Core Values</h3>
+                        <p>Uncompromising quality, complete transparency, and a client-first mindset guide every single legacy project we undertake.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section bg-dark full-width">
+            <div class="about-container text-left">
+                <span class="section-subtitle">Why Choose Dani Real Estate</span>
+                <h2 class="section-title">Two Decades of Distinction</h2>
+                <p class="section-text">Standing out in the luxury market by offering you unmatched value, timeless design, and premium living standards.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4><i class="fas fa-star text-gold"></i> 20+ Years Reputation</h4>
+                        <p>A proven track record of delivering high-end properties on time, backed by twenty years of solid legal and construction expertise.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><i class="fas fa-map-marker-alt text-gold"></i> Strategic Locations</h4>
+                        <p>Our premium developments are situated in highly exclusive neighborhoods with easy access to elite amenities.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><i class="fas fa-credit-card text-gold"></i> Tailored Financial Plans</h4>
+                        <p>We leverage our 20-year relationship with top-tier financial institutions to secure flexible, customized mortgage solutions.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4><i class="fas fa-file-contract text-gold"></i> Full Legal Guarantee</h4>
+                        <p>Zero legal risks. Every single property comes with fully verified titles, instant deeds, and an unconditional corporate warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section bg-dark-alt full-width">
+            <div class="about-container text-left">
+                <span class="section-subtitle">The Experts Behind the Vision</span>
+                <h2 class="section-title">Our Master Builders</h2>
+                <p class="section-text">
+                    Behind our 20-year legacy is a powerhouse of seasoned professionals. Our workforce comprises award-winning structural engineers, visionary interior architects, and legal specialists who ensure your investment is handled with absolute mastery.
+                </p>
+            </div>
+        </section>
+
+        <section class="about-section bg-dark full-width">
+            <div class="about-container text-left">
+                <span class="section-subtitle">Client Stories</span>
+                <h2 class="section-title">Trusted By Generations</h2>
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-box">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Dealing with Dani Real Estate was seamless. Their 20+ years of experience clearly shows in their construction quality and effortless handling of paperwork. Truly premium."</p>
+                        <div class="testimonial-author">— Ato Bekele Demissie (Homeowner)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+              
+    <section class="properties-section bg-dark full-width">
+        <div class="about-container text-left">
+            <span class="section-subtitle">exclusive listings</span>
+            <h2 class="section-title">Our Featured Properties</h2>
+            
+            <div class="slider-window">
+                <div class="properties-slider" id="propertiesSlider">
+                    
+                    <div class="property-card">
+                        <div class="badge-status">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80" alt="Luxury Villa">
+                        <div class="prop-details">
+                            <h3>Dani Luxury Villa</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Bole Atlas, Addis Ababa</p>
+                            <div class="amenities">
+                                <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 350 ㎡</span>
+                            </div>
+                            <div class="price-row">
+                 
+               
+                                <span class="price">$450,000</span>
+                                <a href="#" class="view-prop-btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="badge-status rent">For Rent</div>
+                        <img src="gallary/rm.jpg" alt="Modern Apartment">
+                        <div class="prop-details">
+                            <h3>Premium Modern Apartment</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kazanchis, Addis Ababa</p>
+                            <div class="amenities">
+                                <span><i class="fas fa-bed"></i> 2 Beds</span>
+                                <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 140 ㎡</span>
+                            </div>
+                            <div class="price-row">
+           
+     <span class="price">$2,500 / mo</span>
+                                <a href="#" class="view-prop-btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="badge-status">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Penthouse">
+                        <div class="prop-details">
+                            <h3>Elite Royal Penthouse</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Old Airport, Addis Ababa</p>
+                            <div class="amenities">
+                                <span><i class="fas fa-bed"></i> 5 Beds</span>
+                                <span><i class="fas fa-bath"></i> 5 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 500 ㎡</span>
+                            </div>
+                            <div class="price-row">
+                                
+                                <span class="price">$850,000</span>
+                                <a href="#" class="view-prop-btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="badge-status">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Smart Home">
+                        <div class="prop-details">
+                            <h3>Dani Smart Mansion</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> CMC, Addis Ababa</p>
+                            <div class="amenities">
+                                <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                <span><i class="fas fa-bath"></i> 4 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 400 ㎡</span>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">$620,000</span>
+                                <a href="#" class="view-prop-btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="badge-status rent">For Rent</div>
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=80" alt="Luxury Condo">
+                        <div class="prop-details">
+                            <h3>Urban Luxury Condo</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Meskel Square, Addis Ababa</p>
+                            <div class="amenities">
+                                <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 180 ㎡</span>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">$3,800 / mo</span>
+                                <a href="#" class="view-prop-btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="badge-status">For Sale</div>
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Minimalist Villa">
+                        <div class="prop-details">
+                            <h3>Minimalist Comfort Villa</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Lebu, Addis Ababa</p>
+                            <div class="amenities">
+                                <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 280 ㎡</span>
+                            </div>
+                            <div class="price-row">
+                                <span class="price">$390,000</span>
+                                <a href="#" class="view-prop-btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button onclick="moveSlider('left')"><i class="fas fa-chevron-left"></i></button>
+                <button onclick="moveSlider('right')"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+    
+<section class="testimonials-section">
+    <div class="testimonials-container">
+        <span class="section-subtitle">What Our Clients Say</span>
+        <h2 class="section-title">Client Testimonials</h2>
+        
+        <div class="testimonial-slider-window">
+            <div class="testimonial-slider" id="testimonialSlider">
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Dani Real Estate delivered my villa in Bole on time and with exceptional quality. Their team is highly professional and trustworthy. Thank you so much!"</p>
+                    <div class="client-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Yonas Kassahun">
+                        <div>
+                            <h4>Yonas Kassahun</h4>
+                            <span>Villa Owner (Bole)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"We worked with them to rent a premium apartment for our corporate diplomats in Kazanchis. Their efficiency and customer care are absolutely outstanding."</p>
+                    <div class="client-info">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Selamawit Abebe">
+                        <div>
+                            <h4>Selamawit Abebe</h4>
+                            <span>Corporate Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"The smart home I bought in CMC is completely modern. Their transparency from the beginning of construction to the final finishing was very refreshing."</p>
+                    <div class="client-info">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Dawit Bekele">
+                        <div>
+                            <h4>Dawit Bekele</h4>
+                            <span>Diaspora (Saudi Arabia)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="testimonial-controls">
+            <button onclick="moveTestimonial('left')"><i class="fas fa-arrow-left"></i></button>
+            <button onclick="moveTestimonial('right')"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+<section class="gallery-section">
+    <div class="gallery-container">
+        <h2 class="gallery-title"><span class="yellow-bar">|</span> OUR GALLERY</h2>
+        
+     <div class="image-grid">
+  <img src="gallary/a.jpg" alt="ምስል 1">
+  <img src="gallary/b.jpg" alt="ምስል 2">
+  <img src="your-image3.jpg" alt="ምስል 3">
+  <img src="your-image4.jpg" alt="ምስል 4">
+</div>
+
+        </div>
+</section>
+  <section class="contact-sory">
+       
+    <div class="contact-container">
+        <h2 class="contact-title"><span class="yellow-bar">|</span> CONTACT US</h2>
+        
+        <div class="contact-form">
+            <form id="whatsappForm">
+                <div class="form-row">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                
+                <div class="form-row">
+                    <input type="tel" id="phone" placeholder="Phone No" required>
+                    <input type="email" id="email" placeholder="Email Address">
+                </div>
+                
+                <div class="form-full-width">
+                    <textarea id="message" placeholder="ስለ ቤቱ መረጃ ወይም ጥያቄዎን እዚህ ይጻፉ..." rows="5" required></textarea>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="button" onclick="sendToWhatsApp()" class="submit-btn">
+                        💬 Send via WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+   <!-- Footer -->
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h2>Dani Real Estate</h2>
+            <p>
+                Helping you find your dream home with trusted service,
+                luxury properties, and professional real estate solutions.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p><i class="fas fa-phone"></i> +971 50 123 4567</p>
+
+            <p><i class="fas fa-envelope"></i> info@danirealestate.com</p>
+
+            <p><i class="fas fa-location-dot"></i> Dubai, UAE</p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            <a href="#"><i class="fab fa-youtube"></i></a>
+   <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Dani Real Estate. All Rights Reserved.</p>
+    </div>
+
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+ 
+</body>
+</html>
